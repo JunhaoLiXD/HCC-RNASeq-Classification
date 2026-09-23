@@ -1,0 +1,248 @@
+term_id,term_name,padj,term_size,overlap
+GO:0032502,developmental process,3.9254354637094686e-23,6535,536
+GO:0048856,anatomical structure development,4.099751823169073e-22,5948,496
+GO:0032501,multicellular organismal process,1.4521964547759037e-21,7337,579
+GO:0000280,nuclear division,2.785811959246453e-21,450,87
+GO:0007275,multicellular organism development,4.133921269738941e-21,4690,412
+GO:0048731,system development,1.34580300389352e-20,4023,366
+GO:0050896,response to stimulus,1.7478522581921972e-20,9051,675
+GO:0000278,mitotic cell cycle,3.1496799456210585e-20,893,129
+GO:0048285,organelle fission,5.246013753439384e-20,497,90
+GO:0098813,nuclear chromosome segregation,1.507667571448893e-19,324,70
+GO:1903047,mitotic cell cycle process,1.647794790667101e-19,747,114
+GO:0022402,cell cycle process,4.378430047217314e-19,1290,161
+GO:0007049,cell cycle,1.85711047110608e-18,1668,190
+GO:0007059,chromosome segregation,3.791892418853706e-18,432,80
+GO:0065007,biological regulation,9.958963866755968e-18,12804,868
+GO:0140014,mitotic nuclear division,2.1537598951588017e-17,283,62
+GO:0000070,mitotic sister chromatid segregation,7.823788874121274e-17,194,50
+GO:0000819,sister chromatid segregation,1.3450595463861348e-16,235,55
+GO:0048513,animal organ development,2.3433128377059284e-16,3018,283
+GO:0050789,regulation of biological process,5.678920872745629e-15,12397,836
+GO:0051276,chromosome organization,4.6549970632231506e-14,575,87
+GO:0007088,regulation of mitotic nuclear division,7.12633981154064e-13,121,35
+GO:0051716,cellular response to stimulus,4.402062177685636e-12,7425,545
+GO:0007267,cell-cell signaling,4.458016662937144e-12,1316,145
+GO:0051783,regulation of nuclear division,1.4004443963803801e-11,147,37
+GO:0022414,reproductive process,2.2757065750212926e-11,1592,164
+GO:0010564,regulation of cell cycle process,2.4294016686831743e-11,728,95
+GO:0044772,mitotic cell cycle phase transition,3.8007762712453964e-11,426,67
+GO:0044770,cell cycle phase transition,4.915570489729859e-11,534,77
+GO:1905818,regulation of chromosome separation,7.784807577680882e-11,77,26
+GO:0007094,mitotic spindle assembly checkpoint signaling,9.045048863534014e-11,49,21
+GO:0071173,spindle assembly checkpoint signaling,9.045048863534014e-11,49,21
+GO:0071174,mitotic spindle checkpoint signaling,9.045048863534014e-11,49,21
+GO:0051726,regulation of cell cycle,1.234056953476064e-10,1088,123
+GO:0031577,spindle checkpoint signaling,1.477462228442225e-10,50,21
+GO:0009888,tissue development,1.7232720142845804e-10,2014,192
+GO:0010965,regulation of mitotic sister chromatid separation,2.311779689820684e-10,62,23
+GO:0033046,negative regulation of sister chromatid segregation,2.37958295195381e-10,51,21
+GO:2000816,negative regulation of mitotic sister chromatid separation,2.37958295195381e-10,51,21
+GO:0033048,negative regulation of mitotic sister chromatid segregation,2.37958295195381e-10,51,21
+GO:0045841,negative regulation of mitotic metaphase/anaphase transition,2.37958295195381e-10,51,21
+GO:0033047,regulation of mitotic sister chromatid segregation,3.049532672881069e-10,57,22
+GO:0051301,cell division,3.6537420859643765e-10,656,86
+GO:0051983,regulation of chromosome segregation,5.020441017538953e-10,132,33
+GO:1902100,negative regulation of metaphase/anaphase transition of cell cycle,5.933975722821593e-10,53,21
+GO:1905819,negative regulation of chromosome separation,5.933975722821593e-10,53,21
+GO:0051985,negative regulation of chromosome segregation,5.933975722821593e-10,53,21
+GO:0045839,negative regulation of mitotic nuclear division,7.031189189493959e-10,59,22
+GO:0051306,mitotic sister chromatid separation,7.477159313118821e-10,65,23
+GO:0051784,negative regulation of nuclear division,7.477159313118821e-10,65,23
+GO:0051304,chromosome separation,8.019120245872906e-10,84,26
+GO:0009653,anatomical structure morphogenesis,9.634461406702719e-10,2699,237
+GO:0007346,regulation of mitotic cell cycle,1.1091802787632363e-09,489,70
+GO:0030154,cell differentiation,1.1660245133710477e-09,4443,351
+GO:0048869,cellular developmental process,1.2032416012593248e-09,4444,351
+GO:0033045,regulation of sister chromatid segregation,1.5615027556808422e-09,107,29
+GO:1903046,meiotic cell cycle process,1.7760805950366439e-09,222,43
+GO:0007091,metaphase/anaphase transition of mitotic cell cycle,4.836358419938977e-09,97,27
+GO:1901990,regulation of mitotic cell cycle phase transition,6.645330876315037e-09,327,53
+GO:1901987,regulation of cell cycle phase transition,7.337487547678282e-09,432,63
+GO:0051310,metaphase chromosome alignment,7.726530918977353e-09,106,28
+GO:1902850,microtubule cytoskeleton organization involved in mitosis,1.0315387574830275e-08,171,36
+GO:0044784,metaphase/anaphase transition of cell cycle,1.068356521552012e-08,100,27
+GO:0030071,regulation of mitotic metaphase/anaphase transition,1.1068267031340122e-08,93,26
+GO:0140013,meiotic nuclear division,1.4117252138803068e-08,199,39
+GO:0009410,response to xenobiotic stimulus,1.4748914859348193e-08,396,59
+GO:0051321,meiotic cell cycle,1.781384239215046e-08,295,49
+GO:0050000,chromosome localization,1.901888428302107e-08,125,30
+GO:0120254,olefinic compound metabolic process,2.1214982888647606e-08,158,34
+GO:0050794,regulation of cellular process,2.143769268122275e-08,11962,782
+GO:1902099,regulation of metaphase/anaphase transition of cell cycle,2.4550402147522432e-08,96,26
+GO:0007399,nervous system development,5.246761732390194e-08,2597,223
+GO:0007154,cell communication,8.152205429367854e-08,6598,474
+GO:0045786,negative regulation of cell cycle,1.2844516489409232e-07,374,55
+GO:0000075,cell cycle checkpoint signaling,1.3253609393652294e-07,186,36
+GO:0007093,mitotic cell cycle checkpoint signaling,2.2210449820852733e-07,137,30
+GO:0090068,positive regulation of cell cycle process,3.4562141502192883e-07,259,43
+GO:0008283,cell population proliferation,3.5601826426131844e-07,1961,176
+GO:0009636,response to toxic substance,3.7473599185843755e-07,240,41
+GO:0042445,hormone metabolic process,4.2759332798288833e-07,241,41
+GO:0048518,positive regulation of biological process,6.673216383330381e-07,6150,442
+GO:0023052,signaling,7.904701737230549e-07,6558,466
+GO:0008608,attachment of spindle microtubules to kinetochore,8.71174275397767e-07,54,18
+GO:0007052,mitotic spindle organization,1.0685711560649117e-06,137,29
+GO:0048522,positive regulation of cellular process,1.077459004558363e-06,5739,416
+GO:1901988,negative regulation of cell cycle phase transition,1.1926712439473051e-06,249,41
+GO:0007610,behavior,1.2000951924723506e-06,665,78
+GO:0010948,negative regulation of cell cycle process,1.2597338088613353e-06,290,45
+GO:0099536,synaptic signaling,1.308608516455606e-06,803,89
+GO:0006270,DNA replication initiation,1.657141788637308e-06,38,15
+GO:0071466,cellular response to xenobiotic stimulus,1.8019407428899312e-06,194,35
+GO:0065008,regulation of biological quality,2.2978675094707473e-06,2963,240
+GO:0048706,embryonic skeletal system development,2.4231867352804744e-06,133,28
+GO:0042127,regulation of cell population proliferation,2.6565226989341984e-06,1639,150
+GO:0048519,negative regulation of biological process,3.3413450755659444e-06,5753,414
+GO:0007080,mitotic metaphase chromosome alignment,3.5662541564384448e-06,65,19
+GO:0070887,cellular response to chemical stimulus,4.012924731966147e-06,2199,188
+GO:0099537,trans-synaptic signaling,4.462153912503075e-06,772,85
+GO:0019752,carboxylic acid metabolic process,4.873057082518935e-06,863,92
+GO:1901991,negative regulation of mitotic cell cycle phase transition,5.008410385263273e-06,173,32
+GO:0006082,organic acid metabolic process,5.8235488311660735e-06,892,94
+GO:0007268,chemical synaptic transmission,6.343597877329869e-06,765,84
+GO:0098916,anterograde trans-synaptic signaling,6.343597877329869e-06,765,84
+GO:0043436,oxoacid metabolic process,8.189885893883685e-06,885,93
+GO:0010817,regulation of hormone levels,8.547606879830985e-06,547,66
+GO:0060429,epithelium development,8.771499671309757e-06,1234,119
+GO:0019373,epoxygenase P450 pathway,9.267060004424997e-06,17,10
+GO:0001501,skeletal system development,1.0662983887452334e-05,538,65
+GO:0061982,meiosis I cell cycle process,1.1458340573892233e-05,142,28
+GO:0009887,animal organ morphogenesis,1.3830800305938002e-05,1000,101
+GO:0044281,small molecule metabolic process,1.4020660830251698e-05,1694,151
+GO:0006261,DNA-templated DNA replication,1.5365036728759756e-05,162,30
+GO:0008284,positive regulation of cell population proliferation,1.5758875693769275e-05,923,95
+GO:0045787,positive regulation of cell cycle,1.999449590960145e-05,349,48
+GO:0045930,negative regulation of mitotic cell cycle,2.2942761251885033e-05,223,36
+GO:0045132,meiotic chromosome segregation,2.8374615906361834e-05,96,22
+GO:2001251,negative regulation of chromosome organization,3.477239117509072e-05,97,22
+GO:0006950,response to stress,3.831534578581949e-05,3984,299
+GO:0035295,tube development,5.206174038507501e-05,1094,106
+GO:0009790,embryo development,6.483347287881441e-05,1126,108
+GO:0019953,sexual reproduction,7.113669731149479e-05,1128,108
+GO:0032787,monocarboxylic acid metabolic process,8.119410409331454e-05,604,68
+GO:0051315,attachment of mitotic spindle microtubules to kinetochore,8.188818946099796e-05,25,11
+GO:0030174,regulation of DNA-templated DNA replication initiation,9.809927906162968e-05,16,9
+GO:0006260,DNA replication,0.0001014130041848576,300,42
+GO:0051239,regulation of multicellular organismal process,0.00010980587026615746,2923,229
+GO:0006959,humoral immune response,0.00014487392784691077,271,39
+GO:0006805,xenobiotic metabolic process,0.0001480901419456332,131,25
+GO:0007051,spindle organization,0.00018163070194448396,210,33
+GO:0044771,meiotic cell cycle phase transition,0.0001980355255009861,17,9
+GO:0044786,cell cycle DNA replication,0.0002118156540978162,45,14
+GO:0048598,embryonic morphogenesis,0.0002679033504591951,623,68
+GO:0072359,circulatory system development,0.00033722627815797147,1135,106
+GO:0035239,tube morphogenesis,0.0003642136820510123,877,87
+GO:0051128,regulation of cellular component organization,0.00036577653859809413,2427,194
+GO:0050793,regulation of developmental process,0.0004116711171397005,2431,194
+GO:0040007,growth,0.0004137250313621855,920,90
+GO:0051231,spindle elongation,0.0004875346558565498,14,8
+GO:0098754,detoxification,0.0005271589700297986,149,26
+GO:0033044,regulation of chromosome organization,0.0005422679333520224,241,35
+GO:0006721,terpenoid metabolic process,0.0006109461099728621,104,21
+GO:0048523,negative regulation of cellular process,0.0006345935830490139,5510,385
+GO:0007586,digestion,0.0006531623953536788,141,25
+GO:0007127,meiosis I,0.0006941714259806145,132,24
+GO:0042221,response to chemical,0.0007038197532282228,3863,284
+GO:0015850,organic hydroxy compound transport,0.0007485441456992074,266,37
+GO:0051984,positive regulation of chromosome segregation,0.0007735000107261575,30,11
+GO:0048736,appendage development,0.0007922741485797452,192,30
+GO:0060173,limb development,0.0007922741485797452,192,30
+GO:0008202,steroid metabolic process,0.000806890157009714,323,42
+GO:0006629,lipid metabolic process,0.000832515752523711,1369,121
+GO:0032879,regulation of localization,0.0009269367131535013,1914,158
+GO:0007417,central nervous system development,0.0010009396771487357,1035,97
+GO:0090231,regulation of spindle checkpoint,0.0010295778113909371,25,10
+GO:0051256,mitotic spindle midzone assembly,0.001064966489787731,11,7
+GO:0044839,cell cycle G2/M phase transition,0.0013305196575335947,156,26
+GO:0048609,multicellular organismal reproductive process,0.0014448185193230965,988,93
+GO:1905820,positive regulation of chromosome separation,0.0016464533837800086,32,11
+GO:0000086,G2/M transition of mitotic cell cycle,0.001853510575278887,139,24
+GO:0048704,embryonic skeletal system morphogenesis,0.0018554808547547345,93,19
+GO:0033559,unsaturated fatty acid metabolic process,0.0019071990764425713,111,21
+GO:0048705,skeletal system morphogenesis,0.0019196847277382534,232,33
+GO:0009719,response to endogenous stimulus,0.0021486362207077648,1467,126
+GO:0003008,system process,0.0021794423739538815,2290,181
+GO:0090307,mitotic spindle assembly,0.002223141504140759,77,17
+GO:0042573,retinoic acid metabolic process,0.002344594385527783,33,11
+GO:0000727,double-strand break repair via break-induced replication,0.002431395823211627,12,7
+GO:0000022,mitotic spindle elongation,0.002431395823211627,12,7
+GO:0001523,retinoid metabolic process,0.0024758951983218512,86,18
+GO:0035107,appendage morphogenesis,0.0031794618530566433,153,25
+GO:0035108,limb morphogenesis,0.0031794618530566433,153,25
+GO:1902969,mitotic DNA replication,0.0033903200197872643,17,8
+GO:0033260,nuclear DNA replication,0.0036647243738227647,41,12
+GO:0009072,aromatic amino acid metabolic process,0.0036647243738227647,41,12
+GO:0030326,embryonic limb morphogenesis,0.0037795708569367563,125,22
+GO:0035113,embryonic appendage morphogenesis,0.0037795708569367563,125,22
+GO:0065009,regulation of molecular function,0.0043793099461878465,1070,97
+GO:0009954,proximal/distal pattern formation,0.004555723267503213,35,11
+GO:0003013,circulatory system process,0.00465329685138668,595,62
+GO:0016101,diterpenoid metabolic process,0.004968044624943416,90,18
+GO:0051383,kinetochore organization,0.005132275495439654,29,10
+GO:0051049,regulation of transport,0.005173952240706442,1566,131
+GO:0051338,regulation of transferase activity,0.005594819442502578,408,47
+GO:0001944,vasculature development,0.00565448370422113,758,74
+GO:1901992,positive regulation of mitotic cell cycle phase transition,0.005871567323741922,91,18
+GO:0030509,BMP signaling pathway,0.00653864025153306,159,25
+GO:0051225,spindle assembly,0.006653960843115668,139,23
+GO:0061448,connective tissue development,0.0067592369249562185,291,37
+GO:0006720,isoprenoid metabolic process,0.007109834929161532,120,21
+GO:0016098,monoterpenoid metabolic process,0.007211192699566784,6,5
+GO:0006706,steroid catabolic process,0.007443385521280497,24,9
+GO:1903504,regulation of mitotic spindle checkpoint,0.007443385521280497,24,9
+GO:0090266,regulation of mitotic cell cycle spindle assembly checkpoint,0.007443385521280497,24,9
+GO:0048732,gland development,0.007620974348198115,425,48
+GO:0045595,regulation of cell differentiation,0.007811334467386772,1549,129
+GO:0006066,alcohol metabolic process,0.007823100731952966,352,42
+GO:0071773,cellular response to BMP stimulus,0.00790345020802548,171,26
+GO:0071772,response to BMP,0.00790345020802548,171,26
+GO:0007188,adenylate cyclase-modulating G protein-coupled receptor signaling pathway,0.008016483501452884,270,35
+GO:0048514,blood vessel morphogenesis,0.008296430238466936,632,64
+GO:0044283,small molecule biosynthetic process,0.008549350340013848,580,60
+GO:1901989,positive regulation of cell cycle phase transition,0.008800894073812609,112,20
+GO:0009792,embryo development ending in birth or egg hatching,0.009076775551101266,687,68
+GO:1990169,stress response to copper ion,0.009535613875895995,14,7
+GO:0051255,spindle midzone assembly,0.009535613875895995,14,7
+GO:0010273,detoxification of copper ion,0.009535613875895995,14,7
+GO:0019369,arachidonate metabolic process,0.00960735667300865,52,13
+GO:0045931,positive regulation of mitotic cell cycle,0.010670267228093779,123,21
+GO:0001676,long-chain fatty acid metabolic process,0.010777533448058683,104,19
+GO:0030855,epithelial cell differentiation,0.011040916665699417,745,72
+GO:0046394,carboxylic acid biosynthetic process,0.011993120568750933,310,38
+GO:0043009,chordate embryonic development,0.014021445477049239,669,66
+GO:0007165,signal transduction,0.014791648638646845,6063,408
+GO:0016053,organic acid biosynthetic process,0.015043762046462477,313,38
+GO:0042178,xenobiotic catabolic process,0.01606060285489946,26,9
+GO:0001568,blood vessel development,0.016957652015660393,727,70
+GO:0048562,embryonic organ morphogenesis,0.020157838036360738,305,37
+GO:0051216,cartilage development,0.020797115059065393,213,29
+GO:0043583,ear development,0.021712355719821576,236,31
+GO:0019730,antimicrobial humoral response,0.022031281990490672,149,23
+GO:1901970,positive regulation of mitotic sister chromatid separation,0.023185414466238934,21,8
+GO:0051443,positive regulation of ubiquitin-protein transferase activity,0.023185414466238934,21,8
+GO:0002933,lipid hydroxylation,0.024064098281728456,7,5
+GO:2000026,regulation of multicellular organismal development,0.024499872784227793,1392,116
+GO:0072330,monocarboxylic acid biosynthetic process,0.02495991875714353,215,29
+GO:0000226,microtubule cytoskeleton organization,0.02501332176780073,681,66
+GO:2000027,regulation of animal organ morphogenesis,0.025102901316190928,82,16
+GO:0010038,response to metal ion,0.02514342866559132,320,38
+GO:0090329,regulation of DNA-templated DNA replication,0.025273849703145942,41,11
+GO:0007143,female meiotic nuclear division,0.025273849703145942,41,11
+GO:0050808,synapse organization,0.025422026369061206,561,57
+GO:0097267,omega-hydroxylase P450 pathway,0.025503298621100196,11,6
+GO:1901700,response to oxygen-containing compound,0.025812379715231835,1632,132
+GO:1901976,regulation of cell cycle checkpoint,0.028203100186848042,49,12
+GO:0061844,antimicrobial humoral immune response mediated by antimicrobial peptide,0.03135337767618802,102,18
+GO:0042759,long-chain fatty acid biosynthetic process,0.03205945610260611,28,9
+GO:0140694,membraneless organelle assembly,0.033114409484334896,436,47
+GO:0051438,regulation of ubiquitin-protein transferase activity,0.03453884802007178,35,10
+GO:0010389,regulation of G2/M transition of mitotic cell cycle,0.041309711184964015,104,18
+GO:0030279,negative regulation of ossification,0.04148705669039101,43,11
+GO:0051094,positive regulation of developmental process,0.041582767893021365,1305,109
+GO:0050890,cognition,0.04166796107354601,315,37
+GO:0007423,sensory organ development,0.04340727001876705,625,61
+GO:0007611,learning or memory,0.044525587413948256,268,33
+GO:0048646,anatomical structure formation involved in morphogenesis,0.04492992247689348,1190,101
+GO:0001525,angiogenesis,0.04606540325352872,546,55
+GO:0006570,tyrosine metabolic process,0.04653931999891907,17,7

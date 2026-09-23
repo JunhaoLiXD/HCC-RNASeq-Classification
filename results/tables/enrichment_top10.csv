@@ -1,0 +1,11 @@
+term_id,term_name,gprofiler_padj,wilcoxon_padj,n_methods_tested,n_methods_significant
+GO:0000070,Mitotic Sister Chromatid Segregation,7.823788874121273e-17,2.3879155441853185e-19,2,2
+GO:0140014,Mitotic Nuclear Division,2.1537598951588017e-17,8.295872210468714e-10,2,2
+GO:0000819,Sister Chromatid Segregation,1.3450595463861348e-16,1.221724894128486e-09,2,2
+GO:0098813,Nuclear Chromosome Segregation,1.507667571448893e-19,0.0002399630220957,2,2
+GO:0010564,Regulation of Cell Cycle Process,2.4294016686831743e-11,1.9719039732597123e-09,2,2
+GO:0051310,Metaphase Chromosome Alignment,7.726530918977353e-09,2.2232450223116247e-11,2,2
+GO:0007094,Mitotic Spindle Assembly Checkpoint Signaling,9.045048863534014e-11,9.448279991676648e-09,2,2
+GO:0071173,Spindle Assembly Checkpoint Signaling,9.045048863534014e-11,9.448279991676648e-09,2,2
+GO:0071174,Mitotic Spindle Checkpoint Signaling,9.045048863534014e-11,9.448279991676648e-09,2,2
+GO:0007052,Mitotic Spindle Organization,1.0685711560649115e-06,3.460257113986944e-12,2,2
