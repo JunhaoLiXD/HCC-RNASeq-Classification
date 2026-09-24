@@ -1,18 +1,9 @@
 """
-Step 2 - Dimensionality reduction: PCA, t-SNE, and UMAP.
+Project the samples into 2D with PCA, t-SNE and UMAP and plot each one
+colored by Tumor / Normal.
 
-What this script does:
-  1. Load the expression matrix and the sample -> group sheet from Step 1.
-  2. Filter out low-count genes, log2-transform, keep the top high-variance
-     genes, and z-score each gene so no single gene dominates.
-  3. Project the 100 samples into 2D with PCA, t-SNE, and UMAP.
-  4. Draw one scatter plot per method, colored by Tumor / Normal, with axis
-     labels and a legend.
-
-Outputs:
-  results/figures/02_pca.png
-  results/figures/02_tsne.png
-  results/figures/02_umap.png
+Features are the top high-variance log2 genes, z-scored per gene so scales
+are comparable. Writes 02_pca.png, 02_tsne.png and 02_umap.png.
 """
 
 from pathlib import Path
@@ -24,7 +15,6 @@ from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
 from sklearn.preprocessing import StandardScaler
 
-# --- Project paths -----------------------------------------------------------
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "SRP068976"
 EXPR_PATH = DATA_DIR / "SRP068976.tsv"
@@ -33,10 +23,9 @@ TBL_DIR = ROOT / "results" / "tables"
 
 GROUP_COLORS = {"Tumor": "#d62728", "Normal": "#1f77b4"}
 
-# Analysis parameters (kept here so the summary can cite exact values).
-MIN_COUNT = 10          # a gene must exceed this count ...
-MIN_SAMPLES = 10        # ... in at least this many samples to be kept
-N_TOP_VARIABLE = 2000   # number of most-variable genes fed to the projections
+MIN_COUNT = 10          # keep a gene if its count exceeds this
+MIN_SAMPLES = 10        # in at least this many samples
+N_TOP_VARIABLE = 2000   # most-variable genes fed to the projections
 RANDOM_STATE = 42
 
 
@@ -56,7 +45,6 @@ def build_feature_matrix(expr: pd.DataFrame) -> pd.DataFrame:
 
     log_expr = np.log2(filtered + 1.0)
 
-    # Keep the most variable genes; these carry the biological signal.
     top_genes = log_expr.var(axis=1).nlargest(N_TOP_VARIABLE).index
     log_expr = log_expr.loc[top_genes]
 

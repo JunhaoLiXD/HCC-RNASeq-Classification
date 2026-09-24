@@ -27,6 +27,6 @@ Desktop.ini
 writeup/
 docs/
 
-# Word documents in the project root (assignment prompt + generated writeup;
-# the writeup is submitted on Canvas, not pushed to GitHub)
+# Assignment source docs kept local (Canvas only); the PDF writeup is tracked.
+assignment/**/*.docx
 /*.docx

@@ -1,21 +1,14 @@
 """
-Step 6 & 7 - Combine the enrichment results and extract the top terms.
+Combine the two GO:BP enrichment tables and pull out the top shared terms.
 
-Step 6: build a joint table of the two GO:BP enrichment methods. Each unique GO
-term is one row holding each method's adjusted p-value, plus:
-  n_methods_tested      - how many methods included the term in their analysis
-  n_methods_significant - how many methods called the term significant (padj<0.05)
+Each unique GO term becomes one row with each method's adjusted p-value, plus
+n_methods_tested and n_methods_significant (padj<0.05). The top 10 are ranked by
+number of significant methods, then by combined significance.
 
-Step 7: from the combined table, take the top 10 terms enriched in all/most
-methods (ranked by number of significant methods, then by combined significance).
+Note that g:Profiler only returns significant terms, so its presence is treated
+as "tested and significant"; Wilcoxon returns every tested term with its padj.
 
-Caveat: g:Profiler only returns significant terms, so a term's presence in the
-gProfiler output is treated as "tested and significant". The Wilcoxon method
-returns every tested term with its padj.
-
-Outputs:
-  results/tables/enrichment_combined.csv
-  results/tables/enrichment_top10.csv
+Writes enrichment_combined.csv and enrichment_top10.csv.
 """
 
 from pathlib import Path
@@ -85,7 +78,6 @@ def main() -> None:
     print("Terms significant in one method   : "
           f"{int((combined['n_methods_significant'] == 1).sum())}")
 
-    # Step 7: top 10 enriched in all/most methods.
     top10 = combined.head(10).drop(columns=["score"])
     top10_out = TBL_DIR / "enrichment_top10.csv"
     top10.to_csv(top10_out, index=False)

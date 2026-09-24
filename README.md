@@ -25,9 +25,10 @@ tximport count estimates), so the data are suitable as input for DESeq2.
 .
 ├── data/SRP068976/          # expression matrix + sample metadata (from refine.bio)
 ├── scripts/                 # analysis pipeline (run in numeric order)
-└── results/
-    ├── figures/             # generated figures (PNG)
-    └── tables/              # generated result tables (CSV)
+├── results/
+│   ├── figures/             # generated figures (PNG)
+│   └── tables/              # generated result tables (CSV)
+└── assignment/              # written report (PDF)
 ```
 
 ### scripts/

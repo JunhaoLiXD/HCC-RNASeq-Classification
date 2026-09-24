@@ -1,21 +1,11 @@
 """
-Step 3 - Differential expression analysis (Tumor vs Normal) with PyDESeq2.
+Differential expression, Tumor vs Normal, with PyDESeq2.
 
-What this script does:
-  1. Load the expression matrix and the sample -> group sheet from Step 1.
-  2. Filter low-count genes and round the tximport count estimates to integers,
-     as DESeq2 expects raw-like counts (design = ~condition, two-group test).
-  3. Run PyDESeq2 with Normal as the reference so log2FoldChange is Tumor / Normal.
-  4. Save the full results table, save the top 50 differentially expressed genes,
-     and draw a volcano plot with significance thresholds and a legend.
+Counts are rounded to integers (DESeq2 expects raw-like counts) and tested with
+design ~condition, Normal as reference, so log2FoldChange is Tumor / Normal.
+The design has no patient blocking, following the refinebio-examples tutorial.
 
-Design: ~condition (simple two-group comparison, no patient blocking) to match
-the assignment's referenced refinebio-examples tutorial.
-
-Outputs:
-  results/tables/diffexp_full.csv       all genes with log2FC, p, padj
-  results/tables/diffexp_top50.csv      top 50 genes by adjusted p-value
-  results/figures/03_volcano.png
+Writes diffexp_full.csv, diffexp_top50.csv and 03_volcano.png.
 """
 
 from pathlib import Path
@@ -27,7 +17,6 @@ from adjustText import adjust_text
 from pydeseq2.dds import DeseqDataSet
 from pydeseq2.ds import DeseqStats
 
-# --- Project paths -----------------------------------------------------------
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "SRP068976"
 EXPR_PATH = DATA_DIR / "SRP068976.tsv"
@@ -36,12 +25,11 @@ TBL_DIR = ROOT / "results" / "tables"
 
 GROUP_COLORS = {"Tumor": "#d62728", "Normal": "#1f77b4"}
 
-# Analysis parameters.
-MIN_COUNT = 10          # a gene must exceed this count ...
-MIN_SAMPLES = 10        # ... in at least this many samples to be kept
+MIN_COUNT = 10          # keep a gene if its count exceeds this
+MIN_SAMPLES = 10        # in at least this many samples
 ALPHA = 0.05            # adjusted p-value significance threshold
-LFC_THRESHOLD = 1.0     # |log2FC| threshold used for the volcano coloring
-N_TOP = 50              # number of top genes to tabulate / label
+LFC_THRESHOLD = 1.0     # |log2FC| threshold for volcano coloring
+N_TOP = 50              # rows written to the top-genes table
 
 
 def load_inputs():
@@ -130,12 +118,10 @@ def main() -> None:
     res.index.name = "ensembl_id"
     res = res.sort_values("padj")
 
-    # Full results table.
     full_path = TBL_DIR / "diffexp_full.csv"
     res.to_csv(full_path)
     print(f"Saved full results -> {full_path}")
 
-    # Significance counts.
     sig = res["padj"] < ALPHA
     up = sig & (res["log2FoldChange"] >= LFC_THRESHOLD)
     down = sig & (res["log2FoldChange"] <= -LFC_THRESHOLD)
@@ -143,14 +129,12 @@ def main() -> None:
     print(f"  Up in Tumor   (log2FC >= {LFC_THRESHOLD}): {int(up.sum())}")
     print(f"  Down in Tumor (log2FC <= -{LFC_THRESHOLD}): {int(down.sum())}")
 
-    # Top 50 by adjusted p-value.
     cols = ["gene_symbol", "baseMean", "log2FoldChange", "lfcSE", "pvalue", "padj"]
     top50 = res[cols].head(N_TOP)
     top50_path = TBL_DIR / "diffexp_top50.csv"
     top50.to_csv(top50_path)
     print(f"Saved top {N_TOP} -> {top50_path}")
 
-    # Volcano plot.
     volcano_plot(res, FIG_DIR / "03_volcano.png")
 
 

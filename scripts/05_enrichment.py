@@ -1,22 +1,16 @@
 """
-Step 5 - Gene set enrichment analysis with two different methods.
+Gene-set enrichment by two methods, both over GO Biological Process so their
+results can be combined in Step 6 (a term may be tested/significant by both).
 
-Team of 1, so two method combinations are run. Both methods are from the
-instructor's list and both use the SAME ontology (GO Biological Process) so that
-the combined table in Step 6 is meaningful (a term can be tested / found
-significant by both methods).
+  Method 1: g:Profiler over-representation + GO:BP
+      Input = the strict significant DEG list (padj<0.05 & |log2FC|>2).
 
-  Method 1: gProfiler2 (g:Profiler over-representation)  +  GO:BP
-      Input  = the strict significant DEG list (padj<0.05 & |log2FC|>2).
+  Method 2: Wilcoxon rank-sum test + GO:BP
+      Ranks all tested genes by the DESeq2 Wald statistic, then for each GO:BP
+      set compares member vs non-member ranks with a Mann-Whitney U test.
+      p-values are BH-corrected.
 
-  Method 2: Wilcoxon rank-sum test  +  GO:BP
-      Ranks ALL tested genes by the DESeq2 Wald statistic, then for each GO:BP
-      gene set compares member vs non-member ranks with a Mann-Whitney U
-      (Wilcoxon rank-sum) test. p-values are BH-corrected.
-
-Outputs:
-  results/tables/enrichment_gprofiler_GO.csv
-  results/tables/enrichment_wilcoxon_GO.csv
+Writes enrichment_gprofiler_GO.csv and enrichment_wilcoxon_GO.csv.
 """
 
 import re

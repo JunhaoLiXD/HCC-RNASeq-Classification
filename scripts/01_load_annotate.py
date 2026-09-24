@@ -1,19 +1,9 @@
 """
-Step 1 - Load expression data, annotate gene IDs, and explore variation.
+Load the expression matrix and metadata, map Ensembl IDs to gene symbols,
+and plot the distribution of per-gene median expression.
 
-What this script does:
-  1. Load the RNA-seq expression matrix (genes x samples) and the sample metadata.
-  2. Derive the Tumor / Normal group for each sample from `refinebio_title`.
-  3. Convert Ensembl gene IDs to gene symbols via mygene (annotation kept as a
-     side table; the count matrix keeps Ensembl IDs, which DESeq2 expects later).
-  4. Report matrix size, number of genes/samples, and a description of variation.
-  5. Log-transform the data, compute the per-gene median expression, and draw a
-     density plot of those per-gene medians.
-
-Outputs:
-  results/tables/gene_annotation.csv   Ensembl -> gene symbol mapping
-  results/tables/sample_sheet.csv      sample accession -> group (Tumor/Normal)
-  results/figures/01_density_median.png
+The mapping is kept as a side table; the matrix stays on Ensembl IDs for DESeq2.
+Writes gene_annotation.csv, sample_sheet.csv and 01_density_median.png.
 """
 
 from pathlib import Path
@@ -23,7 +13,6 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-# --- Project paths -----------------------------------------------------------
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "SRP068976"
 EXPR_PATH = DATA_DIR / "SRP068976.tsv"
@@ -33,7 +22,7 @@ TBL_DIR = ROOT / "results" / "tables"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 TBL_DIR.mkdir(parents=True, exist_ok=True)
 
-# --- Consistent group colors used across the whole project -------------------
+# group colors reused across all figures
 GROUP_COLORS = {"Tumor": "#d62728", "Normal": "#1f77b4"}
 
 
@@ -86,19 +75,16 @@ def annotate_gene_symbols(ensembl_ids) -> pd.DataFrame:
 
 
 def main() -> None:
-    # 1. Load data ------------------------------------------------------------
     expr = load_expression()
     sample_sheet = load_sample_sheet(expr.columns)
     sample_sheet.to_csv(TBL_DIR / "sample_sheet.csv")
 
     n_genes, n_samples = expr.shape
 
-    # 2. Gene ID annotation ---------------------------------------------------
     annotation = annotate_gene_symbols(expr.index)
     annotation.to_csv(TBL_DIR / "gene_annotation.csv")
     n_mapped = annotation["gene_symbol"].notna().sum()
 
-    # 3. Report matrix size and mapping ---------------------------------------
     print("=== Step 1: data summary ===")
     print(f"Expression matrix shape : {n_genes} genes x {n_samples} samples")
     print(f"Samples per group       : "
@@ -106,9 +92,8 @@ def main() -> None:
     print(f"Genes with a symbol      : {n_mapped} / {n_genes} "
           f"({100 * n_mapped / n_genes:.1f}%)")
 
-    # 4. Log transform and per-gene variation ---------------------------------
-    # Data are un-normalized tximport count estimates; log2(x + 1) stabilizes
-    # the very wide dynamic range before looking at per-gene statistics.
+    # counts are un-normalized tximport estimates; log2(x+1) tames the dynamic
+    # range before we look at per-gene statistics
     log_expr = np.log2(expr + 1.0)
     per_gene_median = log_expr.median(axis=1)
 
@@ -119,7 +104,6 @@ def main() -> None:
     n_silent = int((per_gene_median == 0).sum())
     print(f"Genes with median log2 expression == 0 (silent): {n_silent}")
 
-    # 5. Density plot of per-gene medians -------------------------------------
     fig, ax = plt.subplots(figsize=(8, 5))
     sns.kdeplot(per_gene_median, fill=True, color="#4c72b0", ax=ax)
     ax.set_xlabel("Per-gene median expression, log2(count + 1)")
