@@ -49,7 +49,15 @@ tximport count estimates), so the data are suitable as input for DESeq2.
 
 ## Requirements
 
-Python 3.11. Main packages: `pandas`, `numpy`, `scipy`, `scikit-learn`,
-`matplotlib`, `seaborn`, `umap-learn`, `statsmodels`, `pydeseq2`, `gseapy`,
-`mygene`, `gprofiler-official`.
+Python 3.13. Pinned packages are listed in `requirements.txt`. To set up a
+virtual environment on Windows:
+
+```
+py -3.13 -m venv .venv
+.venv\Scripts\python -m pip install -r requirements.txt
+```
+
+Then run the scripts in numeric order, e.g. `.venv\Scripts\python scripts\01_load_annotate.py`.
+Steps 1 and 5 query online services (mygene, g:Profiler, Enrichr) and need
+network access.
 
