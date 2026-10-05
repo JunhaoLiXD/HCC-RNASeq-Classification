@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-TBL_DIR = ROOT / "results" / "tables"
+TBL_DIR = ROOT / "results" / "assn2" / "tables"
 
 ALPHA = 0.05
 

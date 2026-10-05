@@ -20,8 +20,8 @@ import seaborn as sns
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "SRP068976"
 EXPR_PATH = DATA_DIR / "SRP068976.tsv"
-FIG_DIR = ROOT / "results" / "figures"
-TBL_DIR = ROOT / "results" / "tables"
+FIG_DIR = ROOT / "results" / "assn2" / "figures"
+TBL_DIR = ROOT / "results" / "assn2" / "tables"
 
 GROUP_COLORS = {"Tumor": "#d62728", "Normal": "#1f77b4"}
 

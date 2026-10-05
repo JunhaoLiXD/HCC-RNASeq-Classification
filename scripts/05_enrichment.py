@@ -21,7 +21,7 @@ from scipy.stats import mannwhitneyu
 from statsmodels.stats.multitest import multipletests
 
 ROOT = Path(__file__).resolve().parents[1]
-TBL_DIR = ROOT / "results" / "tables"
+TBL_DIR = ROOT / "results" / "assn2" / "tables"
 
 MIN_SET_SIZE = 10
 MAX_SET_SIZE = 500
