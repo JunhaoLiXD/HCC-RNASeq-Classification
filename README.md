@@ -26,8 +26,12 @@ tximport count estimates), so the data are suitable as input for DESeq2.
 ├── data/SRP068976/          # expression matrix + sample metadata (from refine.bio)
 ├── scripts/                 # analysis pipeline (run in numeric order)
 ├── results/
-│   ├── figures/             # generated figures (PNG)
-│   └── tables/              # generated result tables (CSV)
+│   ├── assn2/               # Assignment 2 outputs (steps 1–6)
+│   │   ├── figures/         # generated figures (PNG)
+│   │   └── tables/          # generated result tables (CSV)
+│   └── assn3/               # Assignment 3 outputs (steps 7–10)
+│       ├── figures/
+│       └── tables/
 └── assignment/              # written report (PDF)
 ```
 
@@ -41,11 +45,22 @@ tximport count estimates), so the data are suitable as input for DESeq2.
 | `04_heatmap.py` | Heatmap of the significant DEGs with a group side bar. |
 | `05_enrichment.py` | GO:BP enrichment with two methods (g:Profiler over-representation and a Wilcoxon rank-sum gene-set test). |
 | `06_combine_enrichment.py` | Merge the two enrichment results into a combined table and extract the top 10 shared terms. |
+| `07_kmeans.py` | K-means clustering (top 5,000 genes, k = 2..6, elbow + silhouette), then k = 2 on 10 / 100 / 1,000 / 5,000 / 10,000 genes. |
+| `08_hclust.py` | Hierarchical clustering (average linkage, 1 − Pearson r), same k and gene-number sweeps, plus a sample dendrogram. |
+| `09_cluster_heatmap.py` | Heatmap of the top 5,000 genes with row/column dendrograms and K-means, hierarchical and Tumor/Normal annotation bars. |
+| `10_chisq_tests.py` | Chi-squared tests between clustering versions and against Tumor/Normal, with Cramér's V, ARI and BH-adjusted p-values. |
+
+Steps 1–6 make up Assignment 2 (exploration, differential expression,
+enrichment); steps 7–10 make up Assignment 3 (unsupervised clustering).
 
 ### results/
 
-- `figures/` — one PNG per analysis step (density plot, PCA/t-SNE/UMAP, volcano, heatmap).
-- `tables/` — differential expression results, significant DEG list, and enrichment tables.
+Outputs are split by assignment; each folder has `figures/` (PNG) and `tables/` (CSV).
+
+- `assn2/` — density plot, PCA/t-SNE/UMAP, volcano plot and DEG heatmap; sample sheet, gene annotation, differential expression results, significant DEG list and enrichment tables.
+- `assn3/` — k-selection plots, cluster composition plots, sample dendrogram and clustering heatmap; cluster assignments and summaries for both methods, and the chi-squared test table.
+
+The Assignment 3 scripts read `results/assn2/tables/sample_sheet.csv`, so step 1 must be run first.
 
 ## Requirements
 
