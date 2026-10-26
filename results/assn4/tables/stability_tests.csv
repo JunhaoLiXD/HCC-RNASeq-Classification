@@ -1,0 +1,7 @@
+cluster_target,test,measure,statistic,pvalue,n_samples,table_stable_stable,table_stable_unstable,table_unstable_stable,table_unstable_unstable,padj
+kmeans_k2,spearman,agreement,0.6998549712184647,5.435070083340608e-16,100,,,,,1.6305210250021825e-15
+kmeans_k2,spearman,prob_true,0.781122112211221,9.19710221896674e-22,100,,,,,5.5182613313800445e-21
+kmeans_k2,fisher_exact,agreement == 1,inf,0.0012121212121212121,100,96.0,2.0,0.0,2.0,0.0024242424242424242
+kmeans_k3,spearman,agreement,0.3061234095961626,0.0019518241317775847,100,,,,,0.0029277361976663774
+kmeans_k3,spearman,prob_true,0.16357635763576356,0.10391324473513801,100,,,,,0.10391324473513801
+kmeans_k3,fisher_exact,agreement == 1,inf,0.04666666666666667,100,78.0,20.0,0.0,2.0,0.056
